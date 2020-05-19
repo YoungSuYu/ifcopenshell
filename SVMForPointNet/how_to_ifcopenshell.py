@@ -123,8 +123,8 @@ def get_features(ifctype, path):
     frame = pd.DataFrame(data)
     return frame
 
-duplex_window = get_features('ifcwindow', "./ifc/SVM/yonsei.ifc")
-duplex_window.to_csv("./result/duplex_window_yonsei.csv")
+duplex_window = get_features('ifcwindow', "./ifc/SVM/KBIMS_Sample_Mode.ifc")
+duplex_window.to_csv("./result/KBIMS_Sample_Mode.ifc.csv")
 
 def get_building_ifc(path):
     column = get_features('IfcColumn', path)
@@ -139,5 +139,5 @@ def get_building_ifc(path):
     return df
 
 
-duplex_all = get_building_ifc("./ifc/SVM/yonsei.ifc")
-duplex_all.to_csv("./result/duplex_all_yonsei.csv")
+duplex_all = get_building_ifc("./ifc/SVM/KBIMS_Sample_Mode.ifc.ifc")
+duplex_all.to_csv("./result/KBIMS_Sample_Mode.ifc.csv")
